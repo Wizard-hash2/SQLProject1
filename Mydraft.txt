@@ -1,0 +1,61 @@
+1.	book: A list of all books available in the store.
+Columns:  BookId, BookName, LangId fk, PublisherId
+
+
+2.	book_author: A table to manage the many-to-many relationship between books and authors.
+Columns: BookAuthorID pk, BookId fk , AuthorId fk 
+
+3.	author: A list of all authors.
+Columns: AuthorId, AuthorName
+
+
+4.	book_language: A list of the possible languages of books.
+
+Columns: LangId, LangName
+
+5.	publisher: A list of publishers for books.
+Columns: PublisherId, publisherName
+
+6.	Customer: A list of the bookstore's customers.
+
+Columns: CustomerId, CustomerName
+
+7.	customer_address: A list of addresses for customers. Each customer can have multiple addresses.
+Columns: CustAddress Id, CustomerId, AddressStatusId
+
+8.	address_status: A list of statuses for an address (e.g., current, old).
+AddressStatusId, AddressStatus
+
+9.	address: A list of all addresses in the system.
+Columns: CustAddress Id, AddressName, CountryId
+
+10.	country: A list of countries where the addresses are located.
+CountryId, CountryName
+
+
+11.	cust_order: A list of orders placed by customers.
+
+Columns: orderId pk, CustomerId, OrderLineId, ShippingId, OrderHistId, OrderStatusId
+
+12.	order_line: A list of books that are part of each order.
+
+Columns: OrderLineId pk, orderId, BookId, BookName
+
+
+13.	shipping_method: A list of possible shipping methods for an order.
+
+Columns: ShippingId, ShippingName
+
+14.	order_history: A record of the history of an order (e.g., ordered, cancelled, delivered).
+
+Columns: OrderHistId, OrderHistoryName
+
+15.	order_status: A list of possible statuses for an order (e.g., pending, shipped, delivered). 
+Columns:  OrderStatusId,OrderStatusName
+
+
+Set up user groups and roles to control access to the database:
+Adminstrator: Create, insert, update,delete, select
+Customer: Select
+OrderManager: Update
+ShppingManager: Update
