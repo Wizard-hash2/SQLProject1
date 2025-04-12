@@ -1,7 +1,7 @@
 # SQLProject1
 Mysql project where I was able to design a complete sql project of Book orders handling customers details and shipping
-I use the command : TEE C:/path_to_your_file/output.txt; t
-To Record what I do in my mysql 
+
+I use the command : TEE C:/path_to_your_file/output.txt, To Record what I do in my mysql 
 
 
 My Er I draw using draw.io
